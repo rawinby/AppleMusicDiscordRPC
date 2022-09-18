@@ -8,9 +8,11 @@
 - [Yarn](https://classic.yarnpkg.com/en/docs/install)
 - iTunes or Apple Music
 
-## Preview
-
 ## Usage
 
     $ yarn build
     $ node dist
+
+
+## Preview
+<img src="https://i.imgur.com/lTS9KFK.jpg"/>

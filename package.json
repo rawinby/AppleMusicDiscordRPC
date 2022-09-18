@@ -1,0 +1,28 @@
+{
+  "name": "applemusicsiscordshowstatus",
+  "version": "1.0.0",
+  "license": "MIT",
+  "description": "Apple Music Discord Show Status",
+  "main": "index.js",
+  "dependencies": {
+    "@tbogard/itunes-search": "1.0.9",
+    "discord-rpc": "4.0.1",
+    "fs": "^0.0.1-security",
+    "itunes-bridge": "0.6.7",
+    "node-fetch": "2.6.6",
+    "searchitunes": "2.5.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.18.10",
+    "@babel/core": "^7.19.1",
+    "@babel/node": "^7.19.1",
+    "@babel/preset-env": "^7.19.1",
+    "babel-preset-minify": "^0.5.2",
+    "nodemon": "^2.0.20"
+  },
+  "scripts": {
+    "build": "yarn install && rm -rf dist && babel ./src --out-dir ./dist && cp package.json dist/package.json",
+    "started": "babel-node src/index.js",
+    "start": "nodemon --exec babel-node src/index.js"
+  }
+}

@@ -1,10 +1,8 @@
-#!/usr/bin/env node
+import fetch from 'node-fetch'
+import iTunes from 'itunes-bridge'
+import RPC from 'discord-rpc'
+import { searchSong } from '@tbogard/itunes-search'
 
-const fs = require('fs')
-const fetch = require('node-fetch')
-const iTunes = require('itunes-bridge')
-const RPC = require('discord-rpc')
-const { searchSong } = require('@tbogard/itunes-search')
 const iTunesEmitter = iTunes.emitter
 let client = new RPC.Client({ transport: 'ipc' })
 client.login({ clientId: '891586647790075964' }).catch(console.error)
